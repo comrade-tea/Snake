@@ -1,0 +1,312 @@
+.text-center
+	text-align: center
+.text-left
+	text-align: left!important
+
+.block
+	display: block
+.relative
+	position: relative
+.static
+	position: static
+/* colors */
+.clr-yellow
+	color: $color-yellow
+
+.headline-fix
+	max-width: 1050px
+	margin: 0 auto
+
+.breadcrumbs
+	+clearfix
+	max-width: 1100px
+	padding: 0 20px
+	margin: 0 auto 80px
+	a, span
+		color: $color-grey
+		font-size: 16px
+		+max-screen($smartphone-landscape)
+			font-size: 12px
+		+max-screen($smartphone-portrait)
+			font-size: 10px
+		&:after
+			content: "\f061"
+			font-family: 'icomoon'
+			font-size: 10px
+			margin: 0 4px
+			speak: none
+			font-style: normal
+			font-weight: normal
+			font-variant: normal
+			text-transform: none
+			line-height: 1
+		&.breadcrumbs_active
+			color: $color-black
+			font-weight: 700
+			&:after
+				content: " "
+
+.btn-default
+	+transition(all .2s ease-in-out)
+	+centre(x)
+	display: inline-block
+	font-family: "ff-light"
+	position: relative
+	font-size: 19px
+	color: $color-white
+	background: $color-black
+	padding: 20px 48px 15px
+	border: none
+	outline: 0
+	cursor: pointer
+	border-bottom: 5px solid $color-black--lighten
+	&.btn-top-offset
+		margin-top: 100px
+	i
+		display: inline-block
+		position: relative
+		//top: -2px
+		font-size: 32px
+		vertical-align: middle
+	
+	&:hover, &:focus
+		background: $color-yellow
+		border-bottom: 5px solid $color-yellow--dark
+
+  //animaton ver - 2
+//.btn-default
+//	color: $color-white
+//	vertical-align: middle
+//	position: relative
+//	z-index: 1
+//	-webkit-backface-visibility: hidden
+//	-moz-osx-font-smoothing: grayscale
+//.btn-default:focus
+//	outline: none
+//.btn-default > span
+//	vertical-align: middle
+//
+//
+///* Aylen */
+//.btn-default.btn-default
+//	//background: #fff
+//	//color: #37474f
+//	overflow: hidden
+//	-webkit-transition: color 0.3s
+//	transition: color 0.3s
+//.btn-default.btn-default--inverted
+//	background: none
+//	color: #fff
+//.btn-default::before,
+//.btn-default::after
+//	content: ''
+//	position: absolute
+//	height: 72px
+//	width: 100%
+//	bottom: 100%
+//	left: 0
+//	z-index: -1
+//	-webkit-transition: -webkit-transform 0.3s
+//	transition: transform 0.3s
+//	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1)
+//	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1)
+//.btn-default::before
+//	//background: #7986cb
+//	background: tint($color-yellow, 50%)
+//.btn-default::after
+//	//background: #3f51b5
+//	background: $color-yellow
+//.btn-default:hover
+//	color: #fff
+//.btn-default:hover::before,
+//.btn-default:hover::after
+//	-webkit-transform: translate3d(0, 72px, 0)
+//	transform: translate3d(0, 72px, 0)
+//.btn-default:hover::after
+//	-webkit-transition-delay: 0.175s
+//	transition-delay: 0.175s
+
+.link-more
+	+transition(color .3s)
+	display: block
+	color: $color-grey
+	line-height: 1
+	&:hover, &:focus
+		color: $color-black
+	&:before
+		font-family: "icomoon"
+	&:after
+		display: inline-block
+		content: "\e902"
+		font-family: "icomoon"
+		font-size: 24px
+		margin: 0 0 0 15px
+		vertical-align: middle
+		//position: relative
+		//top: 5px
+		//left: 10px
+	//.icon-circle-right
+	&.link-more--border
+		+size(176px, 46px)
+		line-height: 46px
+		font-family: "ff-light"
+		//line-height: 46px
+		border: 1px solid $color-black
+		text-align: center
+		&:after
+			display: inline-block
+			font-size: 30px
+			margin-top: -4px
+			//position: relative
+			//top: 2px
+			//left: 7px
+		&:hover, &:focus
+			color: $color-white
+			background: $color-yellow
+			border: 1px solid $color-yellow--dark
+	&.link-more--reverse
+		display: block
+		font-family: "ff-c"
+		font-size: 14px
+		color: $color-black
+		margin-bottom: 10px
+		white-space: nowrap
+		&:hover, &:focus
+			color: tint($color-black, 40%)
+		&:before
+			content: "\e902"
+			font-family: "icomoon"
+			font-size: 30px
+			vertical-align: middle
+			//position: relative
+			//top: 8px
+			margin-right: 10px
+			+max-screen($small-tablet)
+				font-size: 22px
+		&:after
+			display: none
+
+/* form styles */
+.form-wrap
+	max-width: 500px
+	margin: 0 auto
+	text-align: center
+	.form-cell
+		height: 84px
+		line-height: 84px
+		&.form-cell--t-area
+			height: 220px
+		&:nth-child(1n+2)
+			margin-top: 2px
+			+max-screen($small-tablet)
+				margin-top: 10px
+		+max-screen($small-tablet)
+			height: 50px
+			line-height: 50px
+	.form-default
+		+box
+		+transition(all .2s linear)
+		width: 100%
+		height: 100%
+		margin: 0
+		padding: 30px 38px
+		border: none
+		outline: 0
+		vertical-align: baseline
+		background: #f2f2f2
+		font: 18px/1.37 'ff-light', Verdana, sans-serif
+		+placeholder
+			color: $color-black
+			font: 18px/1.37 'ff-light', Verdana, sans-serif
+		&:focus
+			border-color: $color-yellow
+			outline: 0
+			-webkit-box-shadow: inset 0 1px 1px rgba(255,212,0, 0.3), 0 0 8px rgba(255,212,0,0.6)
+			box-shadow: inset 0 1px 1px rgba(255,212,0, 0.3), 0 0 8px rgba(255,212,0,0.6)
+		+max-screen($small-tablet)
+			padding: 15px
+	.btn-default
+		margin-top: 40px
+		+centre(none)
+
+.form-headline
+	font-size: 36px
+
+#quick-jump
+	+centre(y)
+	position: fixed
+	right: -340px
+	+max-screen($smartphone-landscape)
+		display: none
+	a
+		+transition(all .5s ease-in)
+		+size(400px, 60px)
+		display: block
+		font-family: "ff-c"
+		font-size: 15px
+		color: $color-black
+		background: $color-yellow
+		line-height: 60px
+		padding-left: 40px
+		position: relative
+		right: -60px
+		perspective: 230px
+		//white-space: nowrap
+		&:before
+			+transition(all .6s linear)
+			transform-origin: 100% 50%
+			+size(60px, 60px)
+			display: inline-block
+			font-family: "icomoon"
+			position: absolute
+			left: -60px
+			top: 0
+			background: $color-black
+			color: $color-white
+			font-size: 30px
+			text-align: center
+			line-height: 60px
+			vertical-align: middle
+		&:hover, &:focus
+			right: 340px
+			+max-screen($small-tablet)
+				right: -60px
+		&:hover:before, &:focus:before
+			opacity: 0
+			+transform(rotateY(-45deg))
+			+max-screen($small-tablet)
+				+transform(rotateY(0deg))
+				opacity: 1
+				background: $color-yellow--dark
+
+	.forward
+		&:before
+			content: "\e902"
+		&:after
+			display: none
+
+
+// default page
+.page-default
+	h1
+		margin-bottom: 80px
+	.page-default_bg
+		+size(100%, 800px)
+		+cover
+		position: relative
+.page-default_card
+	//+centre(x)
+	position: relative
+	margin: -650px auto 0
+	font-family: "ff-c"
+	font-size: 17px
+	max-width: 620px
+	padding: 50px
+	background: $color-white
+	+max-screen($smartphone-landscape)
+		padding: 50px 30px
+	h2, h3
+		text-align: left
+		font-family: "ff-c"
+	//h3
+	//	font-size: 18px
